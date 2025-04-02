@@ -1,11 +1,11 @@
 import os
 import json
 
-with open('KIDBOOK/concepts.json', 'r', encoding='utf-8') as f:
+with open('lab1/KIDBOOK/concepts.json', 'r', encoding='utf-8') as f:
     concepts = json.load(f)['concepts']
 
 for term in concepts:
-    filename = f"KIDBOOK/{term}.md"
+    filename = f"lab1/KIDBOOK/{term}.md"
     if not os.path.exists(filename):
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(f"# {term}\n\n(Описание пока отсутствует.)\n")
